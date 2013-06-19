@@ -40,3 +40,9 @@ AKUser *user = [Akuser sharedInstance];
     [alert show];
 }];
 ```
+
+A classe **AKUser** permite que você também verifique se existe uma sessão valida, o método **isValidSession** retorna um **BOOL** (YES/NO) para informar a sessão valida.
+
+```objetive-c
+    [user isValidSession]
+```
