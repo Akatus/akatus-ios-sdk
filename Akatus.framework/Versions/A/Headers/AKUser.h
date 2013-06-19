@@ -14,6 +14,5 @@
                failure:(void (^)(NSDictionary *error))failure;
 - (void)logoutWithCompletion:(void(^)())completion;
 - (BOOL)isValidSession;
-
 @property (nonatomic) BOOL debugMode;
 @end
