@@ -42,8 +42,38 @@ AKUser *user = [Akuser sharedInstance];
 ```
 
 A classe **AKUser** permite que você também verifique se existe uma sessão valida, o método **isValidSession** retorna um **BOOL** (YES/NO) para informar a sessão valida.
-*importante lembrar que toda transação deve ter uma sessão valida para ser concretizada
+
+###### importante lembrar que toda transação deve ter uma sessão valida para ser concretizada
 
 ```objetive-c
 [user isValidSession]
 ```
+
+#### Transação
+
+Para efetuar a transação são necessários 2 passos
+
+[^1]Criar um objeto do tipo AKTransaction setando as propriedades necessarias para efetuar a transação
+
+###### Todas as propriedades são necessarias exceto a imagem do produto
+
+```objective-c
+AKTransaction *transaction = [[AKTransaction alloc] init];
+transaction.amount = 50.0f;
+transaction.installment = 1;
+transaction.productDescription = @"Compra teste SDK";
+transaction.creditCardNumber = @"4012001038443335";
+transaction.creditCardHolderName = @"AUTORIZAR";
+transaction.creditValidates = @"06/15";
+transaction.cvv = @"123";
+transaction.name = @"Funalo de Tal";
+transaction.cpf = @"370.761.736-03";
+transaction.phone = @"11980807070";
+
+NSString *signaturePath = [[NSBundle mainBundle] pathForResource:@"assinatura" ofType:@"jpg" inDirectory:nil];
+transaction.signature = [NSData dataWithContentsOfFile:signaturePath];
+
+NSString *productImagePath = [[NSBundle mainBundle] pathForResource:@"produto" ofType:@"jpg" inDirectory:nil];
+transaction.productImage = [NSData dataWithContentsOfFile:productImagePath];
+```
+
