@@ -53,7 +53,7 @@ A classe **AKUser** permite que você também verifique se existe uma sessão va
 
 Para efetuar a transação são necessários 2 passos
 
-[^1]: Criar um objeto do tipo AKTransaction setando as propriedades necessarias para efetuar a transação
+1 - Criar um objeto do tipo AKTransaction setando as propriedades necessarias para efetuar a transação
 
 ###### Todas as propriedades são necessarias exceto a imagem do produto
 
@@ -77,7 +77,7 @@ NSString *productImagePath = [[NSBundle mainBundle] pathForResource:@"produto" o
 transaction.productImage = [NSData dataWithContentsOfFile:productImagePath];
 ```
 
-[^2]: A transação deve ser enviada atraves da classe **AKTransactionManager** utilizando o método **submitTransactionWithTransaction:(AKTransaction *)transaction success:(void (^)(id transactionInfo))success failure:(void (^)(NSDictionary *error))failure** que recebe como parametro o AKTransaction criado acima.
+2 - A transação deve ser enviada atraves da classe **AKTransactionManager** utilizando o método **submitTransactionWithTransaction:(AKTransaction *)transaction success:(void (^)(id transactionInfo))success failure:(void (^)(NSDictionary *error))failure** que recebe como parametro o AKTransaction criado acima.
 
 ```objective-c
 AKTransactionManager *manager = [[AKTransactionManager alloc] init];
