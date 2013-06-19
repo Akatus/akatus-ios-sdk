@@ -42,7 +42,8 @@ AKUser *user = [Akuser sharedInstance];
 ```
 
 A classe **AKUser** permite que você também verifique se existe uma sessão valida, o método **isValidSession** retorna um **BOOL** (YES/NO) para informar a sessão valida.
+*importante lembrar que toda transação deve ter uma sessão valida para ser concretizada
 
 ```objetive-c
-    [user isValidSession]
+[user isValidSession]
 ```
