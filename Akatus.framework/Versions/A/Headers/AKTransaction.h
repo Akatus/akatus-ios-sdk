@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface AKTransaction : NSObject
-@property (nonatomic) float amount;
+@property (nonatomic) float amount; /*amount without installment fee */
 @property (nonatomic) int installment;
 @property (nonatomic, strong) NSString *productDescription;
 @property (nonatomic, strong) NSString *creditCardNumber;
