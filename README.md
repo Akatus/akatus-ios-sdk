@@ -89,3 +89,22 @@ AKTransactionManager *manager = [[AKTransactionManager alloc] init];
     [alert show];
 }];
 ```
+
+#### Parcelamento
+
+Para saber o valor do parcelamento você deve utilizar o método, **calculeInstallmentValueWithAmount:(float)amount success:(void (^)(NSArray *installments))success failure:(void (^)(NSDictionary *error))failure**, que está em **AKTransaction**, esse método retorna o numero de parcelas o valor da parcela e o valor total, caso haja juros, a taxa juros pode ser encontrada na sua conta Akatus no site [https://site.akatus.com](https://site.akatus.com).
+
+```objective-c
+
+AKTransaction *transaction = [[AKTransaction alloc] init];
+[transaction calculeInstallmentValueWithAmount:10.0f success:^(NSArray *installments) {
+    NSLog(@"%@", installments);
+} failure:^(NSDictionary *error) {
+    NSLog(@"%@", error);
+}];
+
+}
+
+}]
+
+```
