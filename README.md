@@ -103,8 +103,5 @@ AKTransaction *transaction = [[AKTransaction alloc] init];
     NSLog(@"%@", error);
 }];
 
-}
-
-}]
-
 ```
+Observação, o valor retornado no calculo da parcela é apenas para amostragem, o valor que deve ser enviado na transação é apenas o valor sem juros.
