@@ -21,4 +21,6 @@
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSData *signature;
 @property (nonatomic, strong) NSData *productImage;
+
+- (void)calculeInstallmentValueWithAmount:(float)amount success:(void (^)(NSArray *installments))success failure:(void (^)(NSDictionary *error))failure;
 @end
