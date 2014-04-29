@@ -1,0 +1,31 @@
+PODS:
+  - AFNetworking (2.2.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.3):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.3)
+  - AFNetworking/Security (2.2.3)
+  - AFNetworking/Serialization (2.2.3)
+  - AFNetworking/UIKit (2.2.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - DCKeyValueObjectMapping (1.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.2.1)
+  - DCKeyValueObjectMapping
+
+SPEC CHECKSUMS:
+  AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
+  DCKeyValueObjectMapping: 39adaf0a54ff6368a22d9221db60f0696d81ad7b
+
+COCOAPODS: 0.32.1
