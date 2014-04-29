@@ -19,6 +19,7 @@
 		E14CACE81910158600E7748A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACD01910158600E7748A /* UIKit.framework */; };
 		E14CACF01910158600E7748A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14CACEE1910158600E7748A /* InfoPlist.strings */; };
 		E14CACF21910158600E7748A /* iOSAkatusCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */; };
+		E14CACFE19101A8D00E7748A /* CoreUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACFD19101A8D00E7748A /* CoreUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		E14CACED1910158600E7748A /* iOSAkatusCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSAkatusCoreTests-Info.plist"; sourceTree = "<group>"; };
 		E14CACEF1910158600E7748A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAkatusCoreTests.m; sourceTree = "<group>"; };
+		E14CACFC19101A8D00E7748A /* CoreUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreUser.h; path = iOSAkatusCore/CoreUser.h; sourceTree = "<group>"; };
+		E14CACFD19101A8D00E7748A /* CoreUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreUser.m; path = iOSAkatusCore/CoreUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		E14CACD21910158600E7748A /* iOSAkatusCore */ = {
 			isa = PBXGroup;
 			children = (
+				E14CACFB19101A3900E7748A /* iOSAkatusCore */,
 				E14CACDB1910158600E7748A /* AppDelegate.h */,
 				E14CACDC1910158600E7748A /* AppDelegate.m */,
 				E14CACDE1910158600E7748A /* Images.xcassets */,
@@ -142,6 +146,15 @@
 				E14CACEE1910158600E7748A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E14CACFB19101A3900E7748A /* iOSAkatusCore */ = {
+			isa = PBXGroup;
+			children = (
+				E14CACFC19101A8D00E7748A /* CoreUser.h */,
+				E14CACFD19101A8D00E7748A /* CoreUser.m */,
+			);
+			name = iOSAkatusCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +254,7 @@
 			files = (
 				E14CACDD1910158600E7748A /* AppDelegate.m in Sources */,
 				E14CACD91910158600E7748A /* main.m in Sources */,
+				E14CACFE19101A8D00E7748A /* CoreUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +374,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSAkatusCore/iOSAkatusCore-Prefix.pch";
 				INFOPLIST_FILE = "iOSAkatusCore/iOSAkatusCore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +388,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSAkatusCore/iOSAkatusCore-Prefix.pch";
 				INFOPLIST_FILE = "iOSAkatusCore/iOSAkatusCore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
