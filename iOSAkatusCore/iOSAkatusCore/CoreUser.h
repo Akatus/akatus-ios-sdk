@@ -9,17 +9,25 @@
 #import <Foundation/Foundation.h>
 
 @interface CoreUser : NSObject
-@property (strong) NSString *token;
 @property (nonatomic) BOOL accepts_credit_card;
+@property (strong) NSString *api_key;
+@property (strong) NSString *email;
+@property (nonatomic) int assumed_installments;
+@property (strong) NSString *average_ticket;
+@property (strong) NSString *installment_fee;
+@property (strong) NSString *token;
 @property (nonatomic) BOOL is_verified;
 @property (nonatomic) BOOL pre_auth;
-@property (nonatomic) int assumed_installments;
-@property (nonatomic) float average_ticket;
-@property (strong) NSString *installment_fee;
-@property (strong) NSString *api_key;
-@property (strong) NSString *item_photo_id;
 @property (strong) NSString *kind;
 @property (strong) NSString *owner;
-@property (strong) NSString *accountStatus;
+@property (strong) NSString *account_status;
+
+@property (nonatomic) BOOL isValidSession;
+
 + (CoreUser *)shared;
+
+- (void)loginWithEmail:(NSString *)email andPassword:(NSString *)password success:(void(^)())success
+               failure:(void (^)(NSDictionary *error))failure;
+- (void)logoutWithCompletion:(void(^)())completion; /* clear user session */
+
 @end

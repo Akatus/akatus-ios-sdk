@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3AE4EE9B72401BA5937C62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A767087DF24B538AB187DD /* libPods.a */; };
 		E14CACCD1910158600E7748A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACCC1910158600E7748A /* Foundation.framework */; };
 		E14CACCF1910158600E7748A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACCE1910158600E7748A /* CoreGraphics.framework */; };
 		E14CACD11910158600E7748A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACD01910158600E7748A /* UIKit.framework */; };
@@ -20,6 +21,7 @@
 		E14CACF01910158600E7748A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14CACEE1910158600E7748A /* InfoPlist.strings */; };
 		E14CACF21910158600E7748A /* iOSAkatusCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */; };
 		E14CACFE19101A8D00E7748A /* CoreUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACFD19101A8D00E7748A /* CoreUser.m */; };
+		E14CAD001910378900E7748A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACFF1910378900E7748A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89BF25C9D70D4806B5DAFB16 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D2A767087DF24B538AB187DD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14CACC91910158600E7748A /* iOSAkatusCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAkatusCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14CACCC1910158600E7748A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E14CACCE1910158600E7748A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,6 +55,8 @@
 		E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAkatusCoreTests.m; sourceTree = "<group>"; };
 		E14CACFC19101A8D00E7748A /* CoreUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreUser.h; path = iOSAkatusCore/CoreUser.h; sourceTree = "<group>"; };
 		E14CACFD19101A8D00E7748A /* CoreUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreUser.m; path = iOSAkatusCore/CoreUser.m; sourceTree = "<group>"; };
+		E14CACFF1910378900E7748A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E14CAD011910380800E7748A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = iOSAkatusCore/Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14CAD001910378900E7748A /* CoreLocation.framework in Frameworks */,
 				E14CACCF1910158600E7748A /* CoreGraphics.framework in Frameworks */,
 				E14CACD11910158600E7748A /* UIKit.framework in Frameworks */,
 				E14CACCD1910158600E7748A /* Foundation.framework in Frameworks */,
+				5C3AE4EE9B72401BA5937C62 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +92,7 @@
 				E14CACEB1910158600E7748A /* iOSAkatusCoreTests */,
 				E14CACCB1910158600E7748A /* Frameworks */,
 				E14CACCA1910158600E7748A /* Products */,
+				89BF25C9D70D4806B5DAFB16 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +108,12 @@
 		E14CACCB1910158600E7748A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E14CACFF1910378900E7748A /* CoreLocation.framework */,
 				E14CACCC1910158600E7748A /* Foundation.framework */,
 				E14CACCE1910158600E7748A /* CoreGraphics.framework */,
 				E14CACD01910158600E7748A /* UIKit.framework */,
 				E14CACE51910158600E7748A /* XCTest.framework */,
+				D2A767087DF24B538AB187DD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			children = (
 				E14CACFC19101A8D00E7748A /* CoreUser.h */,
 				E14CACFD19101A8D00E7748A /* CoreUser.m */,
+				E14CAD011910380800E7748A /* Constants.h */,
 			);
 			name = iOSAkatusCore;
 			sourceTree = "<group>";
@@ -164,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E14CACF51910158600E7748A /* Build configuration list for PBXNativeTarget "iOSAkatusCore" */;
 			buildPhases = (
+				69D0068B92194AEEBEDBC921 /* Check Pods Manifest.lock */,
 				E14CACC51910158600E7748A /* Sources */,
 				E14CACC61910158600E7748A /* Frameworks */,
 				E14CACC71910158600E7748A /* Resources */,
+				9042BB6794C04B33BCA56D70 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +260,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69D0068B92194AEEBEDBC921 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9042BB6794C04B33BCA56D70 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E14CACC51910158600E7748A /* Sources */ = {
@@ -368,6 +415,7 @@
 		};
 		E14CACF61910158600E7748A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89BF25C9D70D4806B5DAFB16 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -382,6 +430,7 @@
 		};
 		E14CACF71910158600E7748A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89BF25C9D70D4806B5DAFB16 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -453,6 +502,7 @@
 				E14CACF71910158600E7748A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E14CACF81910158600E7748A /* Build configuration list for PBXNativeTarget "iOSAkatusCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +511,7 @@
 				E14CACFA1910158600E7748A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
