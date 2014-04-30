@@ -19,13 +19,29 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DCKeyValueObjectMapping (1.4)
+  - Kiwi (2.2.4):
+    - Kiwi/SenTestingKit
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/SenTestingKit (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - Nocilla (0.8.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2.1)
   - DCKeyValueObjectMapping
+  - Kiwi
+  - Nocilla (from `https://raw.github.com/luisobo/Nocilla/master/Nocilla.podspec`)
+
+EXTERNAL SOURCES:
+  Nocilla:
+    :podspec: https://raw.github.com/luisobo/Nocilla/master/Nocilla.podspec
 
 SPEC CHECKSUMS:
   AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
   DCKeyValueObjectMapping: 39adaf0a54ff6368a22d9221db60f0696d81ad7b
+  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
+  Nocilla: 0c8075046df476b1bc6482caa7f6a69db1a9b277
 
 COCOAPODS: 0.32.1
