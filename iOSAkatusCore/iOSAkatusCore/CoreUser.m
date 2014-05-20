@@ -11,7 +11,7 @@
 #import "DCKeyValueObjectMapping.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
-#import "UIDevice+Hardware.h"
+#import "UIDevice-Hardware.h"
 
 @interface CoreUser () <CLLocationManagerDelegate>
 @property (strong) NSDictionary *geolocation;
@@ -58,8 +58,10 @@
     NSString *latitude = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.latitude];
     NSString *longitude = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.longitude];
     
-    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] hardwareDescription], [[UIDevice currentDevice] systemVersion]];
+    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] modelName], [[UIDevice currentDevice] systemVersion]];
 
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     
     self.geolocation = @{@"latitude" : latitude, @"longitude" : longitude};
     
