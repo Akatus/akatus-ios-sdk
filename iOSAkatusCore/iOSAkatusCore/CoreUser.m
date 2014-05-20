@@ -71,7 +71,6 @@
     NSDictionary *parameters = @{@"email": email, @"password" : password, @"device" : deviceInfo, @"app_version" : majorVersion};
     
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if ([responseObject valueForKey:@"return_code"] > 0) {
             NSDictionary *info = @{@"return_code" : [responseObject valueForKey:@"return_code"], @"message" : [responseObject valueForKey:@"message"]};
@@ -86,9 +85,9 @@
             [userDefaults synchronize];
             success();
         }
-
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [userDefaults setBool:NO forKey:kIsValidSession];
+        [userDefaults synchronize];
         NSLog(@"Error: %@", error);
     }];
 }
