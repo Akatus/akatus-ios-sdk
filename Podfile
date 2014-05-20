@@ -2,6 +2,7 @@ platform :ios, '7.0'
 
 pod 'AFNetworking', '~> 2.2.1'
 pod 'DCKeyValueObjectMapping'
+pod 'UIDevice-Hardware'
 
 target :iOSAkatusCoreTests, :exclusive => true do
     pod 'Kiwi'

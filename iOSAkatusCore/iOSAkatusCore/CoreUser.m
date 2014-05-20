@@ -11,6 +11,7 @@
 #import "DCKeyValueObjectMapping.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
+#import "UIDevice+Hardware.h"
 
 @interface CoreUser () <CLLocationManagerDelegate>
 @property (strong) NSDictionary *geolocation;
@@ -53,18 +54,20 @@
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    NSURL *url = [NSURL URLWithString:kBASE_URL];;
-    
     
     NSString *latitude = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.latitude];
     NSString *longitude = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.longitude];
+    
+    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] hardwareDescription], [[UIDevice currentDevice] systemVersion]];
+
     
     self.geolocation = @{@"latitude" : latitude, @"longitude" : longitude};
     
     NSString *url = [NSString stringWithFormat:@"%@api/mobile/v2/auth",kBASE_URL];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = @{@"foo": @"bar"};
+    NSDictionary *parameters = @{@"email": email, @"password" : password, @"device" : deviceInfo, @"app_version" : majorVersion};
+    
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
