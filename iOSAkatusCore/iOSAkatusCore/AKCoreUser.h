@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CoreUser : NSObject
+@interface AKCoreUser : NSObject
 @property (nonatomic) BOOL accepts_credit_card;
 @property (strong) NSString *api_key;
 @property (strong) NSString *email;
@@ -24,7 +24,7 @@
 
 @property (nonatomic) BOOL isValidSession;
 
-+ (CoreUser *)shared;
++ (AKCoreUser *)shared;
 
 - (void)loginWithEmail:(NSString *)email andPassword:(NSString *)password success:(void(^)())success
                failure:(void (^)(NSDictionary *error))failure;

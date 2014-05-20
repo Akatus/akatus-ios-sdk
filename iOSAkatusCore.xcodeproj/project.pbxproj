@@ -21,7 +21,7 @@
 		E14CACE81910158600E7748A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACD01910158600E7748A /* UIKit.framework */; };
 		E14CACF01910158600E7748A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14CACEE1910158600E7748A /* InfoPlist.strings */; };
 		E14CACF21910158600E7748A /* iOSAkatusCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */; };
-		E14CACFE19101A8D00E7748A /* CoreUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACFD19101A8D00E7748A /* CoreUser.m */; };
+		E14CACFE19101A8D00E7748A /* AKCoreUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACFD19101A8D00E7748A /* AKCoreUser.m */; };
 		E14CAD001910378900E7748A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACFF1910378900E7748A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,8 @@
 		E14CACED1910158600E7748A /* iOSAkatusCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSAkatusCoreTests-Info.plist"; sourceTree = "<group>"; };
 		E14CACEF1910158600E7748A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAkatusCoreTests.m; sourceTree = "<group>"; };
-		E14CACFC19101A8D00E7748A /* CoreUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreUser.h; path = iOSAkatusCore/CoreUser.h; sourceTree = "<group>"; };
-		E14CACFD19101A8D00E7748A /* CoreUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreUser.m; path = iOSAkatusCore/CoreUser.m; sourceTree = "<group>"; };
+		E14CACFC19101A8D00E7748A /* AKCoreUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKCoreUser.h; path = iOSAkatusCore/AKCoreUser.h; sourceTree = "<group>"; };
+		E14CACFD19101A8D00E7748A /* AKCoreUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKCoreUser.m; path = iOSAkatusCore/AKCoreUser.m; sourceTree = "<group>"; };
 		E14CACFF1910378900E7748A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E14CAD011910380800E7748A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = iOSAkatusCore/Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,8 +168,8 @@
 		E14CACFB19101A3900E7748A /* iOSAkatusCore */ = {
 			isa = PBXGroup;
 			children = (
-				E14CACFC19101A8D00E7748A /* CoreUser.h */,
-				E14CACFD19101A8D00E7748A /* CoreUser.m */,
+				E14CACFC19101A8D00E7748A /* AKCoreUser.h */,
+				E14CACFD19101A8D00E7748A /* AKCoreUser.m */,
 				E14CAD011910380800E7748A /* Constants.h */,
 			);
 			name = iOSAkatusCore;
@@ -339,7 +339,7 @@
 			files = (
 				E14CACDD1910158600E7748A /* AppDelegate.m in Sources */,
 				E14CACD91910158600E7748A /* main.m in Sources */,
-				E14CACFE19101A8D00E7748A /* CoreUser.m in Sources */,
+				E14CACFE19101A8D00E7748A /* AKCoreUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

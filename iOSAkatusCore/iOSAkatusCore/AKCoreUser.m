@@ -6,30 +6,30 @@
 //  Copyright (c) 2014 Fernando Bass. All rights reserved.
 //
 
-#import "CoreUser.h"
+#import "AKCoreUser.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import "DCKeyValueObjectMapping.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
 #import "UIDevice-Hardware.h"
 
-@interface CoreUser () <CLLocationManagerDelegate>
+@interface AKCoreUser () <CLLocationManagerDelegate>
 @property (strong) NSDictionary *geolocation;
 @property (strong) CLLocationManager *locationManager;
 @property (nonatomic) BOOL hasLocation;
 @end
 
-@implementation CoreUser
+@implementation AKCoreUser
 
-+ (CoreUser *)shared
++ (AKCoreUser *)shared
 {
-    static CoreUser *user = nil;
+    static AKCoreUser *user = nil;
     
     @synchronized (self){
         
         static dispatch_once_t pred;
         dispatch_once(&pred, ^{
-            user = [[CoreUser alloc] initWithLocation];
+            user = [[AKCoreUser alloc] initWithLocation];
         });
     }
     
