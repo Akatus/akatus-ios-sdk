@@ -35,4 +35,12 @@ AKUserCore *user = [AKUserCore shared];
 [user isValidSession];
 ```
 
+- Recuperando dados do usuário logado
+``` objective-c
+
+    AKCoreUser *user = [AKCoreUser userInfo];
+
+    NSLog(@"Email %@", user.email);
+```
+
 
