@@ -1,3 +1,7 @@
+#AKCoreUser
+
+O AKCoreUser é responsavel pelo login e dados do usuário
+
 - Login
 
 ``` objective-c
@@ -16,8 +20,19 @@ AKUserCore *user = [AKUserCore shared];
 
 ``` objective-c
 
-    [user logoutWithCompletion:^{
-        <#code#>
-    }];
+AKUserCore *user = [AKUserCore shared];
+[user logoutWithCompletion:^{
+    <#code#>
+}];
 
 ```
+
+- Verificando sessão
+
+``` objective-c
+
+AKUserCore *user = [AKUserCore shared];
+[user isValidSession];
+```
+
+
