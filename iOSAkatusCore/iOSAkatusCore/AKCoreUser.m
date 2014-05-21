@@ -88,7 +88,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [userDefaults setBool:NO forKey:kIsValidSession];
         [userDefaults synchronize];
-        NSLog(@"Error: %@", error);
+        NSLog(@"Login Error: %@", error);
     }];
 }
 
