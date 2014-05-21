@@ -52,6 +52,13 @@
     }
 }
 
+- (IBAction)userInfo:(id)sender {
+    AKCoreUser *user = [AKCoreUser userInfo];
+    
+    NSLog(@"Email %@", user.email);
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

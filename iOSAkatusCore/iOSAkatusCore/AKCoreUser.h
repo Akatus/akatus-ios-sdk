@@ -29,5 +29,5 @@
 - (void)loginWithEmail:(NSString *)email andPassword:(NSString *)password success:(void(^)())success
                failure:(void (^)(NSDictionary *error))failure;
 - (void)logoutWithCompletion:(void(^)())completion; /* clear user session */
-
++ (AKCoreUser*)userInfo;
 @end

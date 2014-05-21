@@ -60,7 +60,7 @@
     
     NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] modelName], [[UIDevice currentDevice] systemVersion]];
 
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+//    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
 //    NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     
     self.geolocation = @{@"latitude" : latitude, @"longitude" : longitude};
@@ -94,7 +94,7 @@
     }];
 }
 
-- (AKCoreUser*)userInfo
++ (AKCoreUser*)userInfo
 {
     DCKeyValueObjectMapping *mapping = [DCKeyValueObjectMapping mapperForClass:[self class]];
     
