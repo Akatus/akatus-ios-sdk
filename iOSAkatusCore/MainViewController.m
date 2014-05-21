@@ -7,8 +7,10 @@
 //
 
 #import "MainViewController.h"
+#import "AKCoreUser.h"
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -25,8 +27,29 @@
 
 - (void)viewDidLoad
 {
+    AKCoreUser *user = [AKCoreUser shared];
+
+    if ([user isValidSession]) {
+        [self.loginButton setTitle:@"Logout" forState:UIControlStateNormal];
+    }
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)login:(id)sender {
+    AKCoreUser *user = [AKCoreUser shared];
+    
+    if ([user isValidSession]) {
+        [user logoutWithCompletion:^{
+            [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        }];
+    }else{
+        [user loginWithEmail:@"apple@akatus.com" andPassword:@"akatusapple10" success:^{
+            NSLog(@"Login com sucesso!");
+            [self.loginButton setTitle:@"Logout" forState:UIControlStateNormal];
+        } failure:^(NSDictionary *error) {
+            NSLog(@"Falha %@", error);
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -61,14 +61,16 @@
     NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] modelName], [[UIDevice currentDevice] systemVersion]];
 
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+//    NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     
     self.geolocation = @{@"latitude" : latitude, @"longitude" : longitude};
     
     NSString *url = [NSString stringWithFormat:@"%@api/mobile/v2/auth",kBASE_URL];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = @{@"email": email, @"password" : password, @"device" : deviceInfo, @"app_version" : majorVersion};
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+
+    NSDictionary *parameters = @{@"email": email, @"password" : password, @"device" : deviceInfo, @"app_version" : @"2.3"};
     
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -90,6 +92,17 @@
         [userDefaults synchronize];
         NSLog(@"Login Error: %@", error);
     }];
+}
+
+- (AKCoreUser*)userInfo
+{
+    DCKeyValueObjectMapping *mapping = [DCKeyValueObjectMapping mapperForClass:[self class]];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+
+    AKCoreUser *user = [mapping parseDictionary:[userDefaults objectForKey:kUserInfo]];
+    
+    return user;
 }
 
 - (void)locationManager:(CLLocationManager *)manager

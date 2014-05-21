@@ -23,6 +23,8 @@
 		E14CACF21910158600E7748A /* iOSAkatusCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACF11910158600E7748A /* iOSAkatusCoreTests.m */; };
 		E14CACFE19101A8D00E7748A /* AKCoreUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CACFD19101A8D00E7748A /* AKCoreUser.m */; };
 		E14CAD001910378900E7748A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14CACFF1910378900E7748A /* CoreLocation.framework */; };
+		E1704898192D0B2800B9D71E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1704897192D0B2800B9D71E /* MainViewController.m */; };
+		E170489A192D0BC800B9D71E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1704899192D0BC800B9D71E /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		E14CACFD19101A8D00E7748A /* AKCoreUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKCoreUser.m; path = iOSAkatusCore/AKCoreUser.m; sourceTree = "<group>"; };
 		E14CACFF1910378900E7748A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E14CAD011910380800E7748A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = iOSAkatusCore/Constants.h; sourceTree = "<group>"; };
+		E1704896192D0B2800B9D71E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E1704897192D0B2800B9D71E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E1704899192D0BC800B9D71E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +137,9 @@
 				E14CACDC1910158600E7748A /* AppDelegate.m */,
 				E14CACDE1910158600E7748A /* Images.xcassets */,
 				E14CACD31910158600E7748A /* Supporting Files */,
+				E1704896192D0B2800B9D71E /* MainViewController.h */,
+				E1704897192D0B2800B9D71E /* MainViewController.m */,
+				E1704899192D0BC800B9D71E /* Storyboard.storyboard */,
 			);
 			path = iOSAkatusCore;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			files = (
 				E14CACD71910158600E7748A /* InfoPlist.strings in Resources */,
 				E14CACDF1910158600E7748A /* Images.xcassets in Resources */,
+				E170489A192D0BC800B9D71E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 				E14CACDD1910158600E7748A /* AppDelegate.m in Sources */,
 				E14CACD91910158600E7748A /* main.m in Sources */,
 				E14CACFE19101A8D00E7748A /* AKCoreUser.m in Sources */,
+				E1704898192D0B2800B9D71E /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +472,7 @@
 				INFOPLIST_FILE = "iOSAkatusCore/iOSAkatusCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,6 +488,7 @@
 				INFOPLIST_FILE = "iOSAkatusCore/iOSAkatusCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

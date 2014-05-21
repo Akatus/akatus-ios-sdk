@@ -1,4 +1,4 @@
-#define kBASE_URL @"https://akatus.com/"
+#define kBASE_URL @"https://www.akatus.com/"
 
 #define kUserInfo @"kUserInfo"
 
