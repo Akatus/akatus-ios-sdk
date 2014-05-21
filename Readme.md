@@ -14,4 +14,10 @@ AKUserCore *user = [AKUserCore shared];
 
 - Logout
 
+``` objective-c
 
+    [user logoutWithCompletion:^{
+        <#code#>
+    }];
+
+```
