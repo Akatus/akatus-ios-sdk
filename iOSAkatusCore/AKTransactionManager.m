@@ -311,4 +311,40 @@
     return ((oddDigits + evenDigits) % 10 == 0);
 }
 
+- (void)calculeInstallmentValueWithAmount:(float)amount success:(void (^)(NSArray *installments))success failure:(void (^)(NSDictionary *error))failure
+{
+    
+    DCKeyValueObjectMapping *mapping = [DCKeyValueObjectMapping mapperForClass:[AKCoreUser class]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    AKCoreUser *user = [mapping parseDictionary:[userDefaults objectForKey:kUserInfo]];
+
+    NSString *postURL = [NSString stringWithFormat:@"%@api/v1/parcelamento/simulacao.json?email=%@&amount=%f&payment_method=cartao_visa&api_key=%@",kBASE_URL, user.email, amount, user.api_key];
+    
+    __block NSString *installment_info;
+    __block NSMutableArray *installments;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:postURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        installment_info = [[responseObject valueForKey:@"resposta"] valueForKey:@"descricao"];
+        NSArray *_installments = [[responseObject valueForKey:@"resposta"] valueForKey:@"parcelas"];
+        installments = [NSMutableArray array];
+        for (int i = 0; i < [_installments count]; i++) {
+            if ([[[_installments objectAtIndex:i] valueForKey:@"valor"] floatValue] >= 5.0f) {
+                [installments addObject:[_installments objectAtIndex:i]];
+            }
+        }
+        
+        success(installments);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(@{@"Error": error.description});
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }];
+    
+}
+
+
 @end
