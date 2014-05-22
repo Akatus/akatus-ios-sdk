@@ -313,7 +313,8 @@
 
 - (void)calculeInstallmentValueWithAmount:(float)amount success:(void (^)(NSArray *installments))success failure:(void (^)(NSDictionary *error))failure
 {
-    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
     DCKeyValueObjectMapping *mapping = [DCKeyValueObjectMapping mapperForClass:[AKCoreUser class]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
